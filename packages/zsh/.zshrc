@@ -66,4 +66,5 @@ if [ -e ~/.antibody-plugins ]; then antibody bundle < ~/.antibody-plugins; fi
 
 MINIMAL_USER_CHAR="$"
 
+if [ -e ~/.local_zshrc ]; then source ~/.local_zshrc; fi
 #test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
