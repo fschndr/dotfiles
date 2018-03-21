@@ -23,16 +23,6 @@ setopt hist_verify
 setopt inc_append_history
 setopt share_history # share command history data
 
-
-# POWERLINE
-POWERLINE_CONFIG_COMMAND="/usr/local/bin/powerline-config"
-
-if [[ $(thefuck)  ]] ; then
-  function command_not_found_handler() {
-          eval $(thefuck $@); fc -R
-  }
-fi
-
 alias ll="k --no-vcs -a"
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
@@ -54,9 +44,6 @@ LC_CTYPE="de_DE.UTF-8"
 #if [ "$TMUX" = "" ]; then tmux new -A -s One; fi
 
 if [ -e ~/.aliases ]; then source ~/.aliases; fi
-#if [ -e ~/.env ]; then source ~/.env; fi
-#if [ -e /opt/boxen/env.sh ]; then source /opt/boxen/env.sh ; fi
-#if [ -e ~/motd ]; then cat ~/motd; fi
 
 ssh-add -A &> /dev/null
 
@@ -64,7 +51,17 @@ source <(antibody init)
 
 if [ -e ~/.antibody-plugins ]; then antibody bundle < ~/.antibody-plugins; fi
 
-MINIMAL_USER_CHAR="$"
+MNML_USER_CHAR="=>"
+MNML_PROMPT=(mnml_status)
+
+GOROOT=/usr/local/opt/go/libexec
+GOPATH=$HOME/go
+PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 if [ -e ~/.local_zshrc ]; then source ~/.local_zshrc; fi
-#test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+eval $(thefuck --alias)
+export PATH="/usr/local/sbin:$PATH"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"

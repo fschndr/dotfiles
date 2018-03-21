@@ -25,6 +25,7 @@ inoremap <C-U> <C-G>u<C-U>
 " Also switch on highlighting the last used search pattern.
 if &t_Co > 2 || has("gui_running")
   syntax on
+
   set hlsearch
 endif
 
@@ -79,11 +80,8 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" powerline like statusbar
-" Plugin 'itchyny/lightline.vim'
-" Plugin 'rodjek/vim-puppet'
-
-" Plugin 'junegunn/fzf'
+" Plugin 'yosiat/oceanic-next-vim'
+Plugin 'altercation/vim-colors-solarized'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -102,17 +100,10 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-" let g:lightline = {
-"      \ 'colorscheme': 'wombat',
-"      \ 'component': {
-"      \   'readonly': '%{&readonly?"🔒":""}',
-"      \ },
-"      \ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
-"      \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" }
-"      \ }
+set background=dark
+colorscheme solarized
+call togglebg#map("<F5>")
 
-" highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-" match OverLength /\%81v.\+/
 set clipboard=unnamed
 "set noshowmode
 " set laststatus=2
