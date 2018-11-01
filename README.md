@@ -11,9 +11,9 @@ These dotfiles are supposed to be linked by GNU stow (a symlink farmmanager)
 
 All:
 
-    stow --target ~ --dir packages *
+    stow --target ~  *
 
 
 Just one package (e.g. vim):
 
-    stow --target ~ --dir packages vim
+    stow --target ~ vim
