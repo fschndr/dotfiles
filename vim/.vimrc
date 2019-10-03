@@ -107,3 +107,11 @@ call togglebg#map("<F5>")
 set clipboard=unnamed
 "set noshowmode
 " set laststatus=2
+
+
+
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+
