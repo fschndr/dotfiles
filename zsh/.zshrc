@@ -60,7 +60,10 @@ PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 if [ -e ~/.local_zshrc ]; then source ~/.local_zshrc; fi
 
-eval $(thefuck --alias)
+if type thefuck &> /dev/null; then
+	eval $(thefuck --alias)
+fi
+
 export PATH="/usr/local/sbin:$PATH"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
