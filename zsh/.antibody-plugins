@@ -1,9 +1,9 @@
 zsh-users/zsh-syntax-highlighting
 zsh-users/zsh-completions
 zsh-users/zsh-history-substring-search
-djui/alias-tips
-junegunn/fzf
-andrewferrier/fzf-z
+#djui/alias-tips
+#junegunn/fzf
+#andrewferrier/fzf-z
 subnixr/minimal
 rimraf/k
-eventi/noreallyjustfuckingstopalready
+#eventi/noreallyjustfuckingstopalready
