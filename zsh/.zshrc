@@ -64,4 +64,8 @@ if type thefuck &> /dev/null; then
 	eval $(thefuck --alias)
 fi
 
+# fuzzy stuff
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
 export PATH="/usr/local/sbin:$PATH"
