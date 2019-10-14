@@ -67,5 +67,8 @@ fi
 # fuzzy stuff
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=minimal-magic-enter
+ZSH_AUTOSUGGEST_IGNORE_WIDGETS+=buffer-empty
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#586e75'
 
 export PATH="/usr/local/sbin:$PATH"
