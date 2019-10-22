@@ -54,7 +54,6 @@ if [ -e ~/.antibody-plugins ]; then antibody bundle < ~/.antibody-plugins; fi
 MNML_USER_CHAR="=>"
 MNML_PROMPT=(mnml_status)
 
-GOROOT=/usr/local/opt/go/libexec
 GOPATH=$HOME/go
 PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
